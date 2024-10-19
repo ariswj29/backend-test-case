@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Versi target JavaScript yang dihasilkan
+    "module": "ESNext", // Menggunakan modul ES
+    "moduleResolution": "node",
+    "esModuleInterop": true, // Mengizinkan impor dari modul CommonJS
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["./**/*.ts", "bin/www"],
+  "exclude": ["node_modules"]
+}
