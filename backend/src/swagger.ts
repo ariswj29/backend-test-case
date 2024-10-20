@@ -1,5 +1,3 @@
-import swaggerJsdoc from "swagger-jsdoc";
-
 const options = {
   definition: {
     openapi: "3.0.0",
@@ -8,14 +6,13 @@ const options = {
       version: "1.0.0",
       description: "A simple Express API with Swagger documentation",
     },
+    servers: [
+      {
+        url: "http://localhost:3000",
+      },
+    ],
   },
-  apis: ["./routes/*.ts"], // Path to your API routes
-  encoding: "utf-8",
-  failOnErrors: true,
-  verbose: true,
-  format: ".json",
+  apis: ["./routes/*.js", "./routes/*.ts"],
 };
 
-const swaggerSpecs = swaggerJsdoc(options);
-
-export default swaggerSpecs;
+export default options;
